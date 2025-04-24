@@ -7,7 +7,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route Component={DefaultLayout}>
-            <Route path="/login" Component={Login} />
+            <Route path="/" Component={Login} />
           </Route>
         </Routes>
       </BrowserRouter>
