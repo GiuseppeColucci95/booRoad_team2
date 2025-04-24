@@ -3,7 +3,7 @@ export default function Login() {
         <>
             <div className="container">
                 <form>
-                    <div className="mb-3">
+                    <div className="mb-3" id="username">
                         <label htmlFor="" className="form-label">Username</label>
                         <input
                             type="text"
@@ -14,7 +14,7 @@ export default function Login() {
                             placeholder=""
                         />
                     </div>
-                    <div className="mb-3">
+                    <div className="mb-3" id="password">
                         <label htmlFor="" className="form-label">Password</label>
                         <input
                             type="password"
@@ -25,7 +25,7 @@ export default function Login() {
                             placeholder=""
                         />
                     </div>
-                    <button className="btn btn-primary" type="submit">Submit</button>
+                    <button id="login" className="btn btn-primary" type="submit">Login</button>
 
                 </form>
             </div>
