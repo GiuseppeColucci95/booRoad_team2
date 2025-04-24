@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom"
+
 export default function Login() {
+    const navigate = useNavigate()
+    function handleSubmit(e) {
+        e.preventDefault()
+        navigate("/trips")
+    }
     return (
         <>
             <div id="login-form" className="container login">
@@ -15,7 +22,7 @@ export default function Login() {
                                 placeholder=""
                             />
                         </div>
-                        <div className="mb-3" id="password">
+                        <div className="mb-3" id="password-container">
                             <label htmlFor="" className="form-label">Password</label>
                             <input
                                 type="password"
