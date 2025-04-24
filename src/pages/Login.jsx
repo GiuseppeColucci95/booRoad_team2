@@ -1,11 +1,16 @@
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 export default function Login() {
+    const navigate = useNavigate()
+    function handleSubmit(e) {
+        e.preventDefault()
+        navigate("/trips")
+    }
     return (
         <>
             <div className="container p-4">
                 <div className="card p-4 shadow">
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div className="mb-3" id="username-container">
                             <label htmlFor="" className="form-label">Username</label>
                             <input
@@ -29,7 +34,7 @@ export default function Login() {
                             />
                         </div>
 
-                        <Link to={"/trips"} id="login" className="btn btn-primary">Login</Link>
+                        <button id="login" className="btn btn-primary">Login</button>
                     </form>
                 </div>
             </div>
