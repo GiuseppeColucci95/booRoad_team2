@@ -1,7 +1,7 @@
 export default function Login() {
     return (
         <>
-            <div className="container">
+            <div className="container p-4">
                 <div className="card p-4 shadow">
                     <form>
                         <div className="mb-3" id="username">
