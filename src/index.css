@@ -1,5 +1,9 @@
-@import 'bootstrap';
+@import "bootstrap";
 
-body{
-    background-color:#111a1d ;
+body {
+  background-color: #111a1d;
+}
+
+header {
+  height: 70px;
 }
