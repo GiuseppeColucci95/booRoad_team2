@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Login() {
     return (
         <>
@@ -26,7 +28,7 @@ export default function Login() {
                                 placeholder=""
                             />
                         </div>
-                        <button id="login" className="btn btn-primary" type="submit">Login</button>
+                        <Link to={"/"} id="login" className="btn btn-primary" type="submit">Login</Link>
                     </form>
                 </div>
             </div>
