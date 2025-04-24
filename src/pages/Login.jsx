@@ -6,29 +6,30 @@ export default function Login() {
             <div className="container p-4">
                 <div className="card p-4 shadow">
                     <form>
-                        <div className="mb-3" id="username">
+                        <div className="mb-3" id="username-container">
                             <label htmlFor="" className="form-label">Username</label>
                             <input
                                 type="text"
                                 className="form-control"
-                                name=""
-                                id=""
-                                aria-describedby="helpId"
-                                placeholder=""
+                                name="username"
+                                id="username"
+                                placeholder="Username"
+                                required
                             />
                         </div>
-                        <div className="mb-3" id="password">
+                        <div className="mb-3" id="password-container">
                             <label htmlFor="" className="form-label">Password</label>
                             <input
                                 type="password"
                                 className="form-control"
-                                name=""
-                                id=""
-                                aria-describedby="helpId"
-                                placeholder=""
+                                name="password"
+                                id="password"
+                                placeholder="Password"
+                                required
                             />
                         </div>
-                        <Link to={"/"} id="login" className="btn btn-primary" type="submit">Login</Link>
+
+                        <Link to={"/trips"} id="login" className="btn btn-primary">Login</Link>
                     </form>
                 </div>
             </div>

@@ -3,3 +3,7 @@
 body {
     background-color: #111a1d;
 }
+
+main {
+    height: calc(100vh - 70px);
+}
