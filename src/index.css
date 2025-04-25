@@ -18,16 +18,18 @@
 }
 
 body {
-    background-color: var(--secondary-darker);
+    /* background-color: var(--secondary-darker); */
+    background-image: url('/img/sfondojpg@400x-100.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .header {
-    margin-bottom: 1rem;
-    padding-left: 2rem;
-    padding-top: 1.5rem;
+    padding: 1.5rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .menu-sx {
@@ -39,9 +41,6 @@ body {
     }
     .title {
         color: var(--primary);
-    }
-    .title:hover {
-        color: var(--primary-lilac);
     }
 }
 
@@ -68,7 +67,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--secondary-darker) !important;
+    background-color: transparent !important;
+    border-style: none;
 }
 
 .card form {
@@ -86,21 +86,23 @@ body {
 }
 
 #btn-login {
-    background-color: var(--accent);
-    border-style: none;
+    background-color: transparent;
     border-radius: 50%;
-    color: var(--secondary-darker);
+    border-color: var(--secondary-light);
+    color: var(--secondary-light);
     font-weight: 500;
-    font-size: 1.5rem;
-    padding: 2rem;
-    width: 6rem;
-    height: 6rem;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 4rem;
+    height: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 #btn-login:hover {
-    background-color: var(--accent-green);
+    background-color: var(--accent);
+    color: var(--secondary-dark);
+    border-style: none;
 }
 
 .card form input {
@@ -109,22 +111,35 @@ body {
     min-width: 300px;
     max-width: none;
     padding: 0.5rem;
-    color: var(--secondary-light);
-    border-color: var(--accent);
+    border-color: var(--secondary-light);
     border-radius: 1.5rem;
-    background-color: transparent;
+    color: var(--secondary-light);
+    background-color: transparent !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
+.card form input:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 .h2-login {
-    color: var(--secondary-light);
+    color: var(--primary-lilac);
     margin-bottom: 2rem;
 }
 
 #login-form {
-    height: 70vh;
+    height: 450px;
+    max-width: 500px;
+    margin-bottom: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.1); /* Sfondo trasparente */
+    backdrop-filter: blur(10px); /* Sfocatura dello sfondo */
+    -webkit-backdrop-filter: blur(10px); /* Sfocatura per Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordo semi-trasparente */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombra leggera */
 }
