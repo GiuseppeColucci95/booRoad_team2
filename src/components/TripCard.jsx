@@ -1,7 +1,7 @@
 export default function TripCard({ trip }) {
   //template
   return (
-    <div className="col h-100">
+    <div className="col h-100 trip-card">
       <div className="card trips-list h-100">
         <img
           className="card-img-top h-100"

@@ -369,3 +369,11 @@ footer {
     color: var(--secondary-dark);
     border-color: var(--accent);
 }
+.trip-card{
+    transition: ease 0.3s;
+    &:hover{
+        transform:scale(1.1) rotate(5deg);
+        z-index: 5;
+        box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.5);
+        }
+}
