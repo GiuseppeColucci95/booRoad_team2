@@ -1,6 +1,6 @@
-@import 'bootstrap';
+@import "bootstrap";
 @import 'bootstrap-icons';
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
     margin: 0;
@@ -21,7 +21,7 @@
 }
 
 body {
-    background-image: url('/img/back.jpg');
+    background-image: url("/img/back.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -68,6 +68,12 @@ body {
         cursor: pointer;
     }
 }
+
+a.active {
+    color: var(--accent);
+}
+
+
 
 #card-login {
     width: 100%;
@@ -179,38 +185,12 @@ body {
     /* Ombra leggera */
 }
 
-#jumbotron img {
-    height: 500px;
-    object-fit: cover;
+footer {
+    height: 70px;
 }
 
-.travelers {
-    background-color: transparent;
-    color: var(--secondary-light);
-}
-
-#travelers {
-
-    ul {
-
-
-        li:last-child {
-            border-bottom: none !important;
-        }
-    }
-
-    .traveler-card {
-        width: 50%;
-        margin: auto;
-        background: rgba(255, 255, 255, 0.1);
-        /* Sfondo trasparente */
-        backdrop-filter: blur(10px);
-        /* Sfocatura dello sfondo */
-        -webkit-backdrop-filter: blur(10px);
-        /* Sfocatura per Safari */
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        /* Bordo semi-trasparente */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        /* Ombra leggera */
-    }
+hr {
+    border: 0.5px solid var(--secondary-light);
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
