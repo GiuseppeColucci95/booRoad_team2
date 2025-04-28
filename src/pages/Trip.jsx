@@ -28,7 +28,7 @@ export default function Trip() {
               {
                 travelers.map((traveler, index) => (
                   <li className="list-group-item travelers border-0 border-bottom rounded-0 d-flex justify-content-between" key={index}>
-                    <div>{`${index + 1}. ${traveler}`}</div>
+                    <div>{`${index + 1}. ${traveler.firstName + ' ' + traveler.lastName}`}</div>
                     <div><i className="bi bi-trash"></i></div>
                   </li>
                 ))

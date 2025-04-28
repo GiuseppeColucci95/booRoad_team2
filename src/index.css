@@ -194,3 +194,39 @@ hr {
     margin-left: 2rem;
     margin-right: 2rem;
 }
+
+#jumbotron img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.travelers {
+    background-color: transparent;
+    color: var(--secondary-light);
+}
+
+#travelers {
+
+    ul {
+
+
+        li:last-child {
+            border-bottom: none !important;
+        }
+    }
+
+    .traveler-card {
+        width: 50%;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.1);
+        /* Sfondo trasparente */
+        backdrop-filter: blur(10px);
+        /* Sfocatura dello sfondo */
+        -webkit-backdrop-filter: blur(10px);
+        /* Sfocatura per Safari */
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        /* Bordo semi-trasparente */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        /* Ombra leggera */
+    }
+}
