@@ -1,184 +1,236 @@
 @import "bootstrap";
+@import "bootstrap-icons";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
 }
 
 :root {
-  --primary: rgb(0, 187, 249);
-  --primary-lilac: rgb(153, 102, 204);
-  --secondary-dark: rgb(17, 56, 69);
-  --secondary-darker: rgb(1, 17, 16);
-  --secondary-petroleum: rgb(16, 84, 107);
-  --secondary-light: white;
-  --accent: rgb(0, 245, 212);
-  --accent-green: rgb(7, 228, 114);
+    --primary: rgb(0, 187, 249);
+    --primary-lilac: rgb(153, 102, 204);
+    --secondary-dark: rgb(17, 56, 69);
+    --secondary-darker: rgb(1, 17, 16);
+    --secondary-petroleum: rgb(16, 84, 107);
+    --secondary-light: white;
+    --accent: rgb(0, 245, 212);
+    --accent-green: rgb(7, 228, 114);
 }
 
 body {
-  background-image: url("/img/back.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    background-image: url("/img/back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main {
+    min-height: calc(100vh - 206px);
 }
 
 .header {
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.menu-sx {
-  display: flex;
-  align-items: center;
-  .logo {
-    width: 100px;
-    margin-right: 2rem;
-  }
-  .title {
-    color: var(--primary);
-    font-weight: 800;
-  }
-}
-
-.menu-dx {
-  nav {
-    margin: 0;
+    padding: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
-    list-style: none;
-    color: var(--secondary-light);
-    font-size: 1.25rem;
-    font-weight: 500;
-    a {
-      text-decoration: inherit;
-      color: inherit;
-      &:hover {
-        color: var(--accent);
-        cursor: pointer;
-      }
+}
+
+.menu-sx {
+    display: flex;
+    align-items: center;
+
+    .logo {
+        width: 100px;
+        margin-right: 2rem;
     }
-    a.active {
-      color: var(--accent);
+
+    .title {
+        color: var(--primary);
+        font-weight: 800;
     }
-  }
+}
+
+.menu-dx {
+    nav {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        list-style: none;
+        color: var(--secondary-light);
+        font-size: 1.25rem;
+        font-weight: 500;
+
+        a {
+            text-decoration: inherit;
+            color: inherit;
+
+            &:hover {
+                color: var(--accent);
+                cursor: pointer;
+            }
+        }
+
+        a.active {
+            color: var(--accent);
+        }
+    }
 }
 
 #card-login {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent !important;
-  border-style: none;
-  position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent !important;
+    border-style: none;
+    position: absolute;
 }
 
 .card form {
-  width: 100%;
-  max-width: 500px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-label {
-  color: var(--secondary-light);
+    color: var(--secondary-light);
 }
 
 #btn-login {
-  background-color: transparent;
-  border-radius: 50%;
-  border-color: var(--secondary-light);
-  color: var(--secondary-light);
-  font-weight: 500;
-  font-size: 1rem;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  width: 4rem;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background-color: transparent;
+    border-radius: 50%;
+    border-color: var(--secondary-light);
+    color: var(--secondary-light);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 #btn-login:hover {
-  background-color: var(--accent);
-  color: var(--secondary-dark);
-  border-style: none;
+    background-color: var(--accent);
+    color: var(--secondary-dark);
+    border-style: none;
 }
 
 .card form input {
-  width: 100% !important;
-  max-width: 400px;
-  min-width: 300px;
-  padding: 0.5rem;
-  border-color: var(--secondary-light);
-  border-radius: 1.5rem;
-  color: var(--secondary-light);
-  background-color: transparent !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+    width: 100% !important;
+    max-width: 400px;
+    min-width: 300px;
+    padding: 0.5rem;
+    border-color: var(--secondary-light);
+    border-radius: 1.5rem;
+    color: var(--secondary-light);
+    background-color: transparent !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .card form input:hover {
-  border-color: var(--accent);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .h2-login {
-  color: var(--secondary-light);
-  margin-bottom: 0;
-  font-weight: 700;
-  border-style: solid;
-  border-width: 0.5px;
-  border-color: var(--secondary-light);
-  border-radius: 50%;
-  padding: 1rem;
-  width: 10rem;
-  height: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  bottom: 3rem;
-  background: var(--secondary-dark);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* Sfocatura per Safari */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: var(--secondary-light);
+    margin-bottom: 0;
+    font-weight: 700;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: var(--secondary-light);
+    border-radius: 50%;
+    padding: 1rem;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    bottom: 3rem;
+    background: var(--secondary-dark);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* Sfocatura per Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 #login-form {
-  height: 450px;
-  max-width: 500px;
-  margin-bottom: 4rem;
-  margin-top: 3.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.1); /* Sfondo trasparente */
-  backdrop-filter: blur(10px); /* Sfocatura dello sfondo */
-  -webkit-backdrop-filter: blur(10px); /* Sfocatura per Safari */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Bordo semi-trasparente */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+    height: 450px;
+    max-width: 500px;
+    margin-bottom: 4rem;
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    /* Sfondo trasparente */
+    backdrop-filter: blur(10px);
+    /* Sfocatura dello sfondo */
+    -webkit-backdrop-filter: blur(10px);
+    /* Sfocatura per Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Bordo semi-trasparente */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Ombra leggera */
 }
 
 footer {
-  height: 70px;
+    height: 70px;
 }
-hr {
-  border: 0.5px solid var(--secondary-light);
-  margin-left: 2rem;
-  margin-right: 2rem;
+
+#jumbotron img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.travelers {
+    background-color: transparent;
+    color: var(--secondary-light);
+}
+
+#travelers {
+
+    .container {
+        min-height: 600px;
+
+    }
+
+    ul {
+
+        li:last-child {
+            border-bottom: none !important;
+        }
+    }
+
+    .traveler-card {
+        width: 50%;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.1);
+        /* Sfondo trasparente */
+        backdrop-filter: blur(10px);
+        /* Sfocatura dello sfondo */
+        -webkit-backdrop-filter: blur(10px);
+        /* Sfocatura per Safari */
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        /* Bordo semi-trasparente */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        /* Ombra leggera */
+    }
 }

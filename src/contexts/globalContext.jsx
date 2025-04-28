@@ -1708,6 +1708,7 @@ function TripProvider({ children }) {
     }
   ];
 
+
   //template
   return (
     <TripContext.Provider value={tripsData}>
