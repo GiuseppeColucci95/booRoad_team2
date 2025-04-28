@@ -36,7 +36,7 @@ export default function TripForm({ trips, setTrips }) {
     <div className="container">
       {!add ? (
         <button
-          id="btn-add"
+          id="btn-add-form"
           onClick={() => {
             setAdd(true);
           }}
@@ -78,7 +78,7 @@ export default function TripForm({ trips, setTrips }) {
             />
           </div>
 
-          <button type="submit" id="btn-add">
+          <button type="submit" id="btn-add-form" className="mx-auto">
             Create Travel Card
           </button>
         </form>
