@@ -25,6 +25,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 main {
@@ -198,9 +199,15 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     color: var(--accent);
+
     h6 {
         color: var(--secondary-light);
         font-weight: 300;
+    }
+
+    img {
+        object-fit: cover;
+        aspect-ratio: 1;
     }
 }
 
@@ -238,14 +245,48 @@ footer {
     color: var(--secondary-light);
 }
 
-#travelers {
+#btn-add {
+    background-color: transparent;
+    border-radius: 50%;
+    border-color: var(--secondary-light);
+    color: var(--secondary-light);
+    font-weight: 500;
+    font-size: 0.75rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    &.new {
+        display: inline-block;
+        border-radius: 1rem;
+        width: auto;
+        height: auto;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+#btn-add:hover {
+    background-color: var(--accent);
+    color: var(--secondary-dark);
+    border-color: var(--accent);
+}
+
+#travelers {
     .container {
         min-height: 600px;
-
     }
 
     ul {
+
+        li {
+            div {
+                cursor: pointer;
+            }
+        }
 
         li:last-child {
             border-bottom: none !important;
@@ -254,6 +295,7 @@ footer {
 
     .traveler-card {
         width: 50%;
+        min-height: 45px;
         margin: auto;
         background: rgba(255, 255, 255, 0.1);
         /* Sfondo trasparente */
@@ -266,4 +308,49 @@ footer {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         /* Ombra leggera */
     }
+}
+
+#traveler-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.832);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: white;
+}
+
+.pin {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    color: red;
+    font-size: 2rem;
+
+
+}
+
+#btn-add-form {
+    background-color: transparent;
+    border-radius: 1rem;
+    border-color: var(--secondary-light);
+    color: var(--secondary-light);
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn-add-form:hover {
+    background-color: var(--accent);
+    color: var(--secondary-dark);
+    border-color: var(--accent);
 }
