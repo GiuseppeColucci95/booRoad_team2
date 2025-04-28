@@ -31,6 +31,9 @@ body {
 main {
     min-height: calc(100vh - 206px);
 }
+.text-lilac{
+    color:var(--primary-lilac);
+}
 
 .header {
     padding: 1.5rem;
@@ -279,15 +282,12 @@ footer {
     .container {
         min-height: 600px;
     }
-
     ul {
-
         li {
             div {
                 cursor: pointer;
             }
         }
-
         li:last-child {
             border-bottom: none !important;
         }
@@ -331,15 +331,24 @@ footer {
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    h4{
+        color:var(--accent);
+    }
+    
 }
 
 .pin {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translate(-50%, -110%);
+    right: 0.5rem;
+    background: transparent;
+    border: none;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    &:hover{
+        color: var(--accent);
+    }
 }
 
 #btn-add-form {
