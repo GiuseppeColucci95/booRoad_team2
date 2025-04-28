@@ -166,3 +166,12 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2); /* Bordo semi-trasparente */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombra leggera */
 }
+
+footer {
+    height: 70px;
+}
+hr {
+    border: 0.5px solid var(--secondary-light);
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
