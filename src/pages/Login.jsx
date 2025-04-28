@@ -2,10 +2,13 @@ import { useNavigate } from "react-router-dom"
 
 export default function Login() {
     const navigate = useNavigate()
+
     function handleSubmit(e) {
         e.preventDefault()
         navigate("/trips")
     }
+
+
     return (
         <>
             <div id="login-form" className="container login">
