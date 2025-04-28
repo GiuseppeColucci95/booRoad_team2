@@ -9,10 +9,10 @@ export default function Login() {
     return (
         <>
             <div id="login-form" className="container login">
-                <div className="card w-100">
+                <div className="card w-100" id="card-login">
                     <h2 className="h2-login">LOGIN</h2>
                     <form className="w-100">
-                        <div className="mb-3"  id="username">
+                        <div className="mb-3" id="username">
                             <label htmlFor="" className="form-label">Username</label>
                             <input
                                 type="text"
