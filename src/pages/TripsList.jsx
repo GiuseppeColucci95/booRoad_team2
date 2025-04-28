@@ -7,6 +7,7 @@ import TripCard from "../components/TripCard";
 
 export default function TripsList() {
   const tripsData = useTrips();
+  console.log(tripsData);
 
   //template
   return (
