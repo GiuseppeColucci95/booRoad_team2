@@ -22,7 +22,75 @@
 body {
   background-color: #111a1d;
 }
+#btn-login:hover {
+  background-color: var(--accent);
+  color: var(--secondary-dark);
+  border-style: none;
+}
 
-header {
+.card form input {
+  width: 100% !important;
+  max-width: 400px;
+  min-width: 300px;
+  padding: 0.5rem;
+  border-color: var(--secondary-light);
+  border-radius: 1.5rem;
+  color: var(--secondary-light);
+  background-color: transparent !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card form input:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.h2-login {
+  color: var(--secondary-light);
+  margin-bottom: 0;
+  font-weight: 700;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: var(--secondary-light);
+  border-radius: 50%;
+  padding: 1rem;
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  bottom: 3rem;
+  background: var(--secondary-dark);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Sfocatura per Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#login-form {
+  height: 450px;
+  max-width: 500px;
+  margin-bottom: 4rem;
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.1); /* Sfondo trasparente */
+  backdrop-filter: blur(10px); /* Sfocatura dello sfondo */
+  -webkit-backdrop-filter: blur(10px); /* Sfocatura per Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Bordo semi-trasparente */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+}
+
+footer {
   height: 70px;
+}
+hr {
+  border: 0.5px solid var(--secondary-light);
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
