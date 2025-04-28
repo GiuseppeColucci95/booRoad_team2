@@ -82,12 +82,11 @@ export default function Trip() {
       </section>
 
       <section id="travelers" className="mb-5">
-        {openOverlay && (
-          <TravelerInfo selectedTraveler={selectedTraveler} setOpenOverlay={setOpenOverlay} />
-        )
-        }
-        <div className="container">
-
+        <div className="container  position-relative">
+          {openOverlay && (
+            <TravelerInfo selectedTraveler={selectedTraveler} setOpenOverlay={setOpenOverlay} />
+          )
+          }
           <SearchBar setSearchQuery={setSearchQuery}></SearchBar>
 
           <div className="card traveler-card">
