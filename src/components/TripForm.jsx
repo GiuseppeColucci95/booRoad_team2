@@ -4,6 +4,7 @@ export default function TripForm({ trips, setTrips }) {
   const [destination, setDestination] = useState("");
   const [date, setDate] = useState("");
   const [image, setImage] = useState(null);
+  const [add, setAdd] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,6 +22,7 @@ export default function TripForm({ trips, setTrips }) {
 
     setDestination(""), setDate(""), setImage(null);
     console.log("trip added", newTrip);
+    setAdd(false);
   };
 
   const handleImageChange = (e) => {
@@ -29,45 +31,58 @@ export default function TripForm({ trips, setTrips }) {
       setImage(URL.createObjectURL(file));
     }
   };
+
   return (
     <div className="container">
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label className="form-label">Destination</label>
-          <input
-            type="text"
-            className="form-control"
-            value={destination}
-            onChange={(e) => setDestination(e.target.value)}
-            required
-          />
-        </div>
-
-        <div className="mb-3">
-          <label className="form-label">Date</label>
-          <input
-            type="date"
-            className="form-control"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            required
-          />
-        </div>
-
-        <div className="mb-3">
-          <label className="form-label">Upload Image</label>
-          <input
-            type="file"
-            className="form-control"
-            accept="image/*"
-            onChange={handleImageChange}
-          />
-        </div>
-
-        <button type="submit" id="btn-add">
-          Create Travel Card
+      {!add ? (
+        <button
+          id="btn-add"
+          onClick={() => {
+            setAdd(true);
+          }}
+          className="mx-auto"
+        >
+          Add a new Trip
         </button>
-      </form>
+      ) : (
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label className="form-label">Destination</label>
+            <input
+              type="text"
+              className="form-control"
+              value={destination}
+              onChange={(e) => setDestination(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="mb-3">
+            <label className="form-label">Date</label>
+            <input
+              type="date"
+              className="form-control"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="mb-3">
+            <label className="form-label">Upload Image</label>
+            <input
+              type="file"
+              className="form-control"
+              accept="image/*"
+              onChange={handleImageChange}
+            />
+          </div>
+
+          <button type="submit" id="btn-add">
+            Create Travel Card
+          </button>
+        </form>
+      )}
     </div>
   );
 }
