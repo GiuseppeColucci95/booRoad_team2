@@ -64,7 +64,7 @@ body {
     }
 }
 
-.card {
+#card-login{
     width: 100%;
     display: flex;
     align-items: center;
