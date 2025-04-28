@@ -99,7 +99,7 @@ export default function Trip() {
                     <div onClick={() => clickHandler(traveler)}>{`${index + 1}. ${traveler.firstName + ' ' + traveler.lastName}`}</div>
                     <div className="d-flex gap-2">
                       <div onClick={() => clickHandler(traveler)}>
-                        <i class="bi bi-info-circle"></i>
+                        <i className="bi bi-info-circle"></i>
 
                       </div>
                       <div onClick={() => { handleDelete(index) }}>
