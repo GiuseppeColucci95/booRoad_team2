@@ -1,15 +1,31 @@
 import { useParams } from "react-router-dom";
 import { useTrips } from "../contexts/globalContext";
+import { useState } from "react";
+import { useEffect } from "react";
+import SearchBar from "../components/SearchBar";
 
 export default function Trip() {
 
   //datas
+  const [filteredTravelers, setFilteredTravelers] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
   const { id } = useParams();
   const tripsData = useTrips();
   const trip = tripsData[id - 1];
   const travelers = trip.travelers;
-  console.log(trip);
-  console.log(travelers);
+
+
+  useEffect(() => {
+
+    const filtered = travelers.filter(traveler => {
+      const name = traveler.firstName + " " + traveler.lastName;
+      return name.toLowerCase().includes(searchQuery.toLowerCase());
+    });
+
+    setFilteredTravelers(filtered);
+  }, [searchQuery]);
+
+  console.log(searchQuery);
 
 
   return (
@@ -22,11 +38,13 @@ export default function Trip() {
       <section id="travelers" className="mb-5">
         <div className="container">
 
+          <SearchBar setSearchQuery={setSearchQuery}></SearchBar>
+
           <div className="card traveler-card">
 
             <ul className="list-group text-left ">
               {
-                travelers.map((traveler, index) => (
+                filteredTravelers.map((traveler, index) => (
                   <li className="list-group-item travelers border-0 border-bottom rounded-0 d-flex justify-content-between" key={index}>
                     <div>{`${index + 1}. ${traveler.firstName + ' ' + traveler.lastName}`}</div>
                     <div><i className="bi bi-trash"></i></div>

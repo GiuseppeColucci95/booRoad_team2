@@ -1,5 +1,5 @@
 @import "bootstrap";
-@import 'bootstrap-icons';
+@import "bootstrap-icons";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
@@ -27,6 +27,10 @@ body {
     background-repeat: no-repeat;
 }
 
+main {
+    min-height: calc(100vh - 206px);
+}
+
 .header {
     padding: 1.5rem;
     display: flex;
@@ -50,9 +54,8 @@ body {
 }
 
 .menu-dx {
-    ul {
+    nav {
         margin: 0;
-        ;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -61,19 +64,22 @@ body {
         color: var(--secondary-light);
         font-size: 1.25rem;
         font-weight: 500;
-    }
 
-    li:hover {
-        color: var(--accent);
-        cursor: pointer;
+        a {
+            text-decoration: inherit;
+            color: inherit;
+
+            &:hover {
+                color: var(--accent);
+                cursor: pointer;
+            }
+        }
+
+        a.active {
+            color: var(--accent);
+        }
     }
 }
-
-a.active {
-    color: var(--accent);
-}
-
-
 
 #card-login {
     width: 100%;
@@ -189,12 +195,6 @@ footer {
     height: 70px;
 }
 
-hr {
-    border: 0.5px solid var(--secondary-light);
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-
 #jumbotron img {
     height: 500px;
     object-fit: cover;
@@ -207,8 +207,12 @@ hr {
 
 #travelers {
 
-    ul {
+    .container {
+        min-height: 600px;
 
+    }
+
+    ul {
 
         li:last-child {
             border-bottom: none !important;

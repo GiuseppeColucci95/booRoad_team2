@@ -7,7 +7,7 @@ export default function Header() {
       <div className="header">
         <div className="menu-sx">
           <img
-            src="./public/img/logo_1.svg"
+            src="/img/logo_1.svg"
             className="logo"
             alt=""
             srcSet=""
