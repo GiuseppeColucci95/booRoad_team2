@@ -23,6 +23,7 @@ export default function Login() {
                                 id=""
                                 aria-describedby="helpId"
                                 placeholder=""
+                                required
                             />
                         </div>
                         <div className="mb-3" id="password-container">
@@ -33,6 +34,7 @@ export default function Login() {
                                 id=""
                                 aria-describedby="helpId"
                                 placeholder=""
+                                required
                             />
                         </div>
                         <button id="btn-login" className="btn mt-4" type="submit">Login</button>
