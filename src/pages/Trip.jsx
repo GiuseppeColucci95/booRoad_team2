@@ -7,7 +7,7 @@ export default function Trip() {
   const { id } = useParams();
   const tripsData = useTrips();
   const trip = tripsData[id - 1];
-  const travelers = trip.travellers;
+  const travelers = trip.travelers;
   console.log(trip);
   console.log(travelers);
 
