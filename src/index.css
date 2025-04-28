@@ -205,6 +205,36 @@ footer {
     color: var(--secondary-light);
 }
 
+#btn-add {
+    background-color: transparent;
+    border-radius: 50%;
+    border-color: var(--secondary-light);
+    color: var(--secondary-light);
+    font-weight: 500;
+    font-size: 0.75rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.new {
+        display: inline-block;
+        border-radius: 1rem;
+        width: auto;
+        height: auto;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+#btn-add:hover {
+    background-color: var(--accent);
+    color: var(--secondary-dark);
+    border-color: var(--accent);
+}
+
 #travelers {
 
     .container {
@@ -214,6 +244,12 @@ footer {
 
     ul {
 
+        li {
+            div {
+                cursor: pointer;
+            }
+        }
+
         li:last-child {
             border-bottom: none !important;
         }
@@ -221,6 +257,7 @@ footer {
 
     .traveler-card {
         width: 50%;
+        min-height: 45px;
         margin: auto;
         background: rgba(255, 255, 255, 0.1);
         /* Sfondo trasparente */
