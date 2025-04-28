@@ -1,4 +1,5 @@
 @import 'bootstrap';
+@import 'bootstrap-icons';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -36,10 +37,12 @@ body {
 .menu-sx {
     display: flex;
     align-items: center;
+
     .logo {
         width: 100px;
         margin-right: 2rem;
     }
+
     .title {
         color: var(--primary);
         font-weight: 800;
@@ -48,7 +51,8 @@ body {
 
 .menu-dx {
     ul {
-        margin: 0;;
+        margin: 0;
+        ;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -58,13 +62,14 @@ body {
         font-size: 1.25rem;
         font-weight: 500;
     }
+
     li:hover {
         color: var(--accent);
         cursor: pointer;
     }
 }
 
-#card-login{
+#card-login {
     width: 100%;
     display: flex;
     align-items: center;
@@ -103,6 +108,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 #btn-login:hover {
     background-color: var(--accent);
     color: var(--secondary-dark);
@@ -146,7 +152,8 @@ body {
     bottom: 3rem;
     background: var(--secondary-dark);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Sfocatura per Safari */
+    -webkit-backdrop-filter: blur(10px);
+    /* Sfocatura per Safari */
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -160,9 +167,50 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 1rem;
-    background: rgba(255, 255, 255, 0.1); /* Sfondo trasparente */
-    backdrop-filter: blur(10px); /* Sfocatura dello sfondo */
-    -webkit-backdrop-filter: blur(10px); /* Sfocatura per Safari */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordo semi-trasparente */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+    background: rgba(255, 255, 255, 0.1);
+    /* Sfondo trasparente */
+    backdrop-filter: blur(10px);
+    /* Sfocatura dello sfondo */
+    -webkit-backdrop-filter: blur(10px);
+    /* Sfocatura per Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Bordo semi-trasparente */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Ombra leggera */
+}
+
+#jumbotron img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.travelers {
+    background-color: transparent;
+    color: var(--secondary-light);
+}
+
+#travelers {
+
+    ul {
+
+
+        li:last-child {
+            border-bottom: none !important;
+        }
+    }
+
+    .traveler-card {
+        width: 50%;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.1);
+        /* Sfondo trasparente */
+        backdrop-filter: blur(10px);
+        /* Sfocatura dello sfondo */
+        -webkit-backdrop-filter: blur(10px);
+        /* Sfocatura per Safari */
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        /* Bordo semi-trasparente */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        /* Ombra leggera */
+    }
 }
