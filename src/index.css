@@ -191,6 +191,19 @@ main {
     /* Ombra leggera */
 }
 
+.trips-list {
+    background: rgba(11, 10, 10, 0.527);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: var(--accent);
+    h6 {
+        color: var(--secondary-light);
+        font-weight: 300;
+    }
+}
+
 footer {
     height: 70px;
 }
