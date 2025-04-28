@@ -9,9 +9,6 @@ const TripContext = createContext();
 //function to wrap the app
 function TripProvider({ children }) {
 
-  // const [trips, setTrips] = useState([]);
-  // setTrips(tripsData);
-
   //data imports
   const tripsData = [
     {
@@ -180,8 +177,6 @@ function TripProvider({ children }) {
       ],
     },
   ];
-  console.log(tripsData);
-
 
   //template
   return (

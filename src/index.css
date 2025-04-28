@@ -1,4 +1,23 @@
 @import "bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+:root {
+  --primary: rgb(0, 187, 249);
+  --primary-lilac: rgb(153, 102, 204);
+  --secondary-dark: rgb(17, 56, 69);
+  --secondary-darker: rgb(1, 17, 16);
+  --secondary-petroleum: rgb(16, 84, 107);
+  --secondary-light: white;
+  --accent: rgb(0, 245, 212);
+  --accent-green: rgb(7, 228, 114);
+}
 
 body {
   background-color: #111a1d;

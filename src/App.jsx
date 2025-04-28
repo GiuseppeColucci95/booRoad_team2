@@ -8,6 +8,7 @@ import { TripProvider } from "./contexts/globalContext";
 import DefaultLayout from "./layouts/DefaultLayout";
 import Login from "./pages/Login";
 import TripsList from "./pages/TripsList";
+import Trip from "./pages/Trip";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
             <Route Component={DefaultLayout}>
               <Route path="/" Component={Login} />
               <Route path="/trips" Component={TripsList} />
+              <Route path="/trips/:id" Component={Trip} />
             </Route>
           </Routes>
         </BrowserRouter>
