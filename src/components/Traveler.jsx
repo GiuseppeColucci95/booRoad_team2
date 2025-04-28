@@ -4,7 +4,7 @@ export default function TravelerInfo({ selectedTraveler, setOpenOverlay }) {
 
     return (
         <div id="traveler-info">
-            <div className="card m-5 position-relative">
+            <div className="card-info p-4 m-5 position-relative">
                 <div className="pin" onClick={() => { setOpenOverlay(false) }}><i class="bi bi-x-circle"></i></div>
 
                 <div className="card-body">
