@@ -2,7 +2,7 @@ export default function TripCard({ trip }) {
   //template
   return (
     <div className="col h-100">
-      <div className="card h-100">
+      <div className="card trips-list h-100">
         <img
           className="card-img-top h-100"
           src={!(trip.image.length > 30) ? `/images/${trip.image}` : trip.image}
