@@ -217,14 +217,18 @@ main {
     border-color: var(--secondary-light);
     color: var(--secondary-light);
     font-weight: 500;
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     padding: 0.5rem;
-    margin-bottom: 1rem;
-    width: 2rem;
-    height: 2rem;
+    width: 2.2rem;
+    height: 2.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    #btn-add:hover {
+        background-color: var(--accent);
+        color: var(--secondary-dark);
+        border-style: none;
+    }
 }
 
 footer {
