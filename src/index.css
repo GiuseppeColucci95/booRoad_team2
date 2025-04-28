@@ -204,6 +204,22 @@ main {
     }
 }
 
+#btn-add {
+    background-color: transparent;
+    border-radius: 50%;
+    border-color: var(--secondary-light);
+    color: var(--secondary-light);
+    font-weight: 500;
+    font-size: 0.5rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 footer {
     height: 70px;
 }
