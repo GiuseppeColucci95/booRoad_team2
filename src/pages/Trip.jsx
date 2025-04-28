@@ -7,7 +7,7 @@ import TravelerInfo from "../components/Traveler";
 
 export default function Trip() {
 
-  //datas
+  //dataS
   const [filteredTravelers, setFilteredTravelers] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [openOverlay, setOpenOverlay] = useState(false);
@@ -96,13 +96,14 @@ export default function Trip() {
               {
                 filteredTravelers.map((traveler, index) => (
                   <li className="list-group-item travelers border-0 border-bottom rounded-0 d-flex justify-content-between" key={index}>
-                    <div>{`${index + 1}. ${traveler.firstName + ' ' + traveler.lastName}`}</div>
+                    <div onClick={() => clickHandler(traveler)}>{`${index + 1}. ${traveler.firstName + ' ' + traveler.lastName}`}</div>
                     <div className="d-flex gap-2">
-                      <div onClick={() => handleDelete(index)}>
-                        <i className="bi bi-trash"></i>
-                      </div>
-                      <div onClick={() => { clickHandler(traveler) }}>
+                      <div onClick={() => clickHandler(traveler)}>
                         <i class="bi bi-info-circle"></i>
+
+                      </div>
+                      <div onClick={() => { handleDelete(index) }}>
+                        <i className="bi bi-trash"></i>
                       </div>
                     </div>
                   </li>
