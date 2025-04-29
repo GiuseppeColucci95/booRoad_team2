@@ -11,6 +11,7 @@ import TripsList from "./pages/TripsList";
 import Trip from "./pages/Trip";
 
 export default function App() {
+
   return (
     <>
       <TripProvider>
