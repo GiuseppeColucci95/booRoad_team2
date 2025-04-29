@@ -10,7 +10,7 @@ export default function TravelerInfo({ selectedTraveler, setOpenOverlay }) {
                     <h4 className="card-title fs-2 mb-4">{fullName}</h4>
                     <p className="card-text fs-3 mb-4"><b className="text-lilac"><i class="bi bi-envelope text-lilac"></i> </b>{selectedTraveler.email}</p>
                     <p className="card-text fs-3  mb-4"><i className="bi bi-telephone text-lilac"></i> <span className="border-bottom border-light">{selectedTraveler.phone}</span></p>
-                    <p className="card-text  fs-3 mb-4"><b className="text-lilac"><i class="bi bi-person-vcard text-lilac"></i> </b>{selectedTraveler.fiscalCode}</p>
+                    <p className="card-text  fs-3 mb-4"><b className="text-lilac"><i className="bi bi-person-vcard text-lilac"></i> </b>{selectedTraveler.fiscalCode}</p>
                 </div>
             </div>
         </div>
