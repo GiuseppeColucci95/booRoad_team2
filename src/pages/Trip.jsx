@@ -82,7 +82,7 @@ export default function Trip() {
       </section>
 
       <section id="travelers" className="mb-5">
-        <div className="container  position-relative">
+        <div className="container">
           {openOverlay && (
             <TravelerInfo selectedTraveler={selectedTraveler} setOpenOverlay={setOpenOverlay} />
           )
