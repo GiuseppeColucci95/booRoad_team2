@@ -14,13 +14,11 @@ export default function Trip() {
   const [selectedTraveler, setSelectedTraveler] = useState('');
   const { id } = useParams();
   const tripsData = useTrips();
+  const trip = tripsData[id - 1];
+  /*   const [travelers, setTravelers] = useState(trip.travelers);
+   */
+  const [travelers, setTravelers] = useState(trip?.travelers ?? []);
 
-  const trip = tripsData ? tripsData[id - 1] : null;
-  if (!trip) {
-    return <h2 style={{ textAlign: "center", color: "white" }}>Trip not found</h2>;
-  }
-
-  const [travelers, setTravelers] = useState(trip.travelers);
   const [newTraveler, setNewTraveler] = useState({});
   const [add, setAdd] = useState(false);
 
@@ -82,15 +80,15 @@ export default function Trip() {
   return (
     <>
       <section id="jumbotron" className="mb-5">
-        <h1 className="text-center text-white py-3">{trip.destination.toUpperCase()}</h1>
+        <h1 className="text-center text-white py-3">{trip?.destination.toUpperCase()}</h1>
         <div className="text-center mb-4">
           <h2>{`${trip.date} / ${trip.returnDate}`}</h2>
         </div>
-        <img className="w-100" src={`/images/${trip.image}`} alt={`${trip.title} image`} />
+        <img className="w-100" src={`/images/${trip?.image}`} alt={`${trip?.title} image`} />
       </section>
 
       <section id="travelers" className="mb-5">
-        <div className="container">
+        <div className="container  position-relative">
           {openOverlay && (
             <TravelerInfo selectedTraveler={selectedTraveler} setOpenOverlay={setOpenOverlay} />
           )
