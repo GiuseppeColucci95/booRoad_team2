@@ -15,6 +15,7 @@ function TripProvider({ children }) {
       id: 1,
       destination: "Paris, France",
       date: "2023-11-15",
+      returnDate: "2023-11-20",
       image: "paris.jpeg",
       travelers: [
         {
@@ -128,6 +129,7 @@ function TripProvider({ children }) {
       id: 2,
       destination: "Tokyo, Japan",
       date: "2024-01-10",
+      returnDate: "2024-01-17",
       image: "tokyo.jpg",
       travelers: [
         {
@@ -241,6 +243,7 @@ function TripProvider({ children }) {
       id: 3,
       destination: "New York, USA",
       date: "2023-12-05",
+      returnDate: "2023-12-19",
       image: "new_york.jpg",
       travelers: [
         {
@@ -354,6 +357,7 @@ function TripProvider({ children }) {
       id: 4,
       destination: "Sydney, Australia",
       date: "2024-02-20",
+      returnDate: "2024-03-20",
       image: "sydney.jpg",
       travelers: [
         {
@@ -467,6 +471,7 @@ function TripProvider({ children }) {
       id: 5,
       destination: "Rome, Italy",
       date: "2024-03-15",
+      returnDate: "2024-03-21",
       image: "roma.jpg",
       travelers: [
         {
@@ -580,6 +585,7 @@ function TripProvider({ children }) {
       id: 6,
       destination: "Cape Town, South Africa",
       date: "2024-04-10",
+      returnDate: "2024-05-05",
       image: "cape_town.jpeg",
       travelers: [
         {
@@ -693,6 +699,7 @@ function TripProvider({ children }) {
       id: 7,
       destination: "Rio de Janeiro, Brazil",
       date: "2024-05-05",
+      returnDate: "2024-05-19",
       image: "rio_de_janeiro.jpeg",
       travelers: [
         {
@@ -806,6 +813,7 @@ function TripProvider({ children }) {
       id: 8,
       destination: "Bangkok, Thailand",
       date: "2024-06-20",
+      returnDate: "2024-06-29",
       image: "bangkok.jpg",
       travelers: [
         {
@@ -919,6 +927,7 @@ function TripProvider({ children }) {
       id: 9,
       destination: "Dubai, UAE",
       date: "2024-07-15",
+      returnDate: "2024-08-01",
       image: "dubai.jpeg",
       travelers: [
         {
@@ -1032,6 +1041,7 @@ function TripProvider({ children }) {
       id: 10,
       destination: "Istanbul, Turkey",
       date: "2024-08-10",
+      returnDate: "2024-08-17",
       image: "instanbul.jpg",
       travelers: [
         {
@@ -1145,6 +1155,7 @@ function TripProvider({ children }) {
       id: 11,
       destination: "Berlin, Germany",
       date: "2024-09-05",
+      returnDate: "2024-09-15",
       image: "berlin.png",
       travelers: [
         {
@@ -1258,6 +1269,7 @@ function TripProvider({ children }) {
       id: 12,
       destination: "Athens, Greece",
       date: "2024-10-10",
+      returnDate: "2024-10-18",
       image: "athens.png",
       travelers: [
         {
@@ -1371,6 +1383,7 @@ function TripProvider({ children }) {
       id: 13,
       destination: "Lisbon, Portugal",
       date: "2024-11-15",
+      returnDate: "2024-11-27",
       image: "lisbon.png",
       travelers: [
         {
@@ -1484,6 +1497,7 @@ function TripProvider({ children }) {
       id: 14,
       destination: "Moscow, Russia",
       date: "2024-12-20",
+      returnDate: "2025-01-06",
       image: "moscow.png",
       travelers: [
         {
@@ -1597,6 +1611,7 @@ function TripProvider({ children }) {
       id: 15,
       destination: "Seoul, South Korea",
       date: "2025-01-05",
+      returnDate: "2025-03-10",
       image: "seoul.png",
       travelers: [
         {
