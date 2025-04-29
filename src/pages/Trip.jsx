@@ -83,6 +83,9 @@ export default function Trip() {
     <>
       <section id="jumbotron" className="mb-5">
         <h1 className="text-center text-white py-3">{trip.destination.toUpperCase()}</h1>
+        <div className="text-center mb-4">
+          <h2>{`${trip.date} / ${trip.returnDate}`}</h2>
+        </div>
         <img className="w-100" src={`/images/${trip.image}`} alt={`${trip.title} image`} />
       </section>
 

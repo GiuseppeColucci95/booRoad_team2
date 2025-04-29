@@ -3,16 +3,19 @@ import { useState } from "react";
 export default function TripForm({ trips, setTrips }) {
   const [destination, setDestination] = useState("");
   const [date, setDate] = useState("");
+  const [returnDate, setReturnDate] = useState("");
+
   const [image, setImage] = useState(null);
   const [add, setAdd] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ destination, date, image });
+    console.log({ destination, date, returnDate, image });
     const newTrip = {
       id: trips.length + 1,
       destination: destination,
       date: date,
+      returnDate: returnDate,
       image: image,
       travelers: [],
     };
@@ -20,7 +23,7 @@ export default function TripForm({ trips, setTrips }) {
       setTrips([...trips, newTrip]);
     }
 
-    setDestination(""), setDate(""), setImage(null);
+    setDestination(""), setDate(""), setReturnDate(""), setImage(null);
     console.log("trip added", newTrip);
     setAdd(false);
   };
@@ -57,15 +60,28 @@ export default function TripForm({ trips, setTrips }) {
             />
           </div>
 
-          <div className="mb-3">
-            <label className="form-label">Date</label>
-            <input
-              type="date"
-              className="form-control"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-              required
-            />
+          <div className="d-flex gap-3">
+            <div className="mb-3 w-50">
+              <label className="form-label">Departure Date</label>
+              <input
+                type="date"
+                className="form-control"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className="mb-3 w-50">
+              <label className="form-label">Return Date</label>
+              <input
+                type="date"
+                className="form-control"
+                value={returnDate}
+                onChange={(e) => setReturnDate(e.target.value)}
+                required
+              />
+            </div>
           </div>
 
           <div className="mb-3">

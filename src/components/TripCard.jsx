@@ -1,4 +1,6 @@
 export default function TripCard({ trip }) {
+
+
   //template
   return (
     <div className="col h-100 trip-card">
@@ -10,7 +12,8 @@ export default function TripCard({ trip }) {
         />
         <div className="card-body">
           <h5>{trip.destination}</h5>
-          <h6>{trip.date}</h6>
+          <h6>From: {trip.date}</h6>
+          <h6>To: {trip.returnDate}</h6>
         </div>
       </div>
     </div>

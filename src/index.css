@@ -31,8 +31,9 @@ body {
 main {
     min-height: calc(100vh - 206px);
 }
-.text-lilac{
-    color:var(--primary-lilac);
+
+.text-lilac {
+    color: var(--primary-lilac);
 }
 
 .header {
@@ -227,6 +228,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+
     #btn-add:hover {
         background-color: var(--accent);
         color: var(--secondary-dark);
@@ -238,9 +240,17 @@ footer {
     height: 70px;
 }
 
-#jumbotron img {
-    height: 500px;
-    object-fit: cover;
+#jumbotron {
+
+    img {
+        height: 500px;
+        object-fit: cover;
+
+    }
+
+    h2 {
+        color: var(--accent);
+    }
 }
 
 .travelers {
@@ -282,12 +292,14 @@ footer {
     .container {
         min-height: 600px;
     }
+
     ul {
         li {
             div {
                 cursor: pointer;
             }
         }
+
         li:last-child {
             border-bottom: none !important;
         }
@@ -317,14 +329,15 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color:transparent;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 100;
     color: white;
 }
-.card-info{
+
+.card-info {
     border-radius: 1rem;
     background: rgba(42, 42, 42, 0.641);
     backdrop-filter: blur(10px);
@@ -333,11 +346,12 @@ footer {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     width: 75%;
     height: 50%;
-    h4{
-        color:var(--accent);
+
+    h4 {
+        color: var(--accent);
         border-bottom: 1px solid white;
     }
-    
+
 }
 
 .pin {
@@ -349,7 +363,8 @@ footer {
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         color: var(--accent);
     }
 }
@@ -372,11 +387,13 @@ footer {
     color: var(--secondary-dark);
     border-color: var(--accent);
 }
-.trip-card{
+
+.trip-card {
     transition: ease 0.3s;
-    &:hover{
+
+    &:hover {
         z-index: 10;
         box-shadow: 3px 3px 30px rgba(217, 216, 216, 0.808);
-     }
-     
+    }
+
 }
