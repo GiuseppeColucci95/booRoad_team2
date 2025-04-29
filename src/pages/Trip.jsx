@@ -14,7 +14,12 @@ export default function Trip() {
   const [selectedTraveler, setSelectedTraveler] = useState('');
   const { id } = useParams();
   const tripsData = useTrips();
-  const trip = tripsData[id - 1];
+
+  const trip = tripsData ? tripsData[id - 1] : null;
+  if (!trip) {
+    return <h2 style={{ textAlign: "center", color: "white" }}>Trip not found</h2>;
+  }
+
   const [travelers, setTravelers] = useState(trip.travelers);
   const [newTraveler, setNewTraveler] = useState({});
   const [add, setAdd] = useState(false);
